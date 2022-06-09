@@ -50,14 +50,17 @@ const Contact = () => {
   }
   const onMessageSubmit = (data) => {
     generateContactNumber()
-    sendForm('default_service', 'template_5prqtp4', '#contact-form')
-      .then(function (response) {
-        document.querySelector('#modal-1').className = "modal active"
+    // sendForm('default_service', 'template_5prqtp4', '#contact-form')
+    //   .then(function (response) {
+    //     document.querySelector('#modal-1').className = "modal active"
 
-        formRef.current.reset();
-      }, function (error) {
-        document.querySelector('#modal-2').className = "modal active"
-      });
+    //     formRef.current.reset();
+    //   }, function (error) {
+    //     document.querySelector('#modal-2').className = "modal active"
+    //   });
+    document.querySelector('#modal-1').className = "modal active"
+
+    formRef.current.reset();
   };
 
   return (
